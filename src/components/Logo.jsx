@@ -2,7 +2,9 @@ import React from 'react'
 
 function Logo({width = "100px"}) {
   return (
-    <div>Logo</div>
+    <div>
+      <img className='w-14' src="/Logo.png" />
+    </div>
   )
 }
 

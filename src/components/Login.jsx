@@ -22,7 +22,7 @@ function Login() {
                 const userData = await authService.getCurrentUser()
 
                 if (userData) {
-                    dispatch(authLogin(userData))
+                    dispatch(authLogin({userData}))
                 }
 
                 navigate("/")
@@ -34,12 +34,12 @@ function Login() {
 
   return (
     <div
-    className='flex items-center justify-center w-full'
+    className='flex items-center justify-center w-full m-auto'
     >
         <div
         className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
         >
-            <div className='mb-2 flex justify-center'>
+            <div className='mb-2 relative left-4'>
                 <span className='inline-block w-full max-w-[100px]'>
                     <Logo width='100%' />
                 </span>
