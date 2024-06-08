@@ -1,4 +1,6 @@
 *{
   border: none;
+  width: auto;
   text-align: center;
+  overflow-x: hidden;
 }

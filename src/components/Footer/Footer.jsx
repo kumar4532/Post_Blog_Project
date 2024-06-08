@@ -4,19 +4,19 @@ import Logo from '../Logo';
 
 function Footer() {
   return (
-    <section className="relative overflow-hidden py-10 bg-black border border-t-2 border-t-slate-100">
+    <section className="relative overflow-hidden py-10 bg-black">
             <div className="relative z-10 mx-auto max-w-7xl px-4">
                 <div className="-m-6 mb-4 flex flex-wrap">
                     <div className="w-full p-6 md:w-1/2 lg:w-5/12">
                         <div className="flex h-full flex-col justify-between">
-                            <div className="lg:mb-4 lg:inline-flex lg:items-center lg:ml-10 lg:mt-11 relative m-auto">
+                            <div className="lg:mb-4 lg:inline-flex lg:items-center lg:ml-10 lg:mt-11 mx-auto">
                                 <Logo width="100px" />
                             </div>
                         </div>
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-2/12">
                         <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+                            <h3 className="tracking-px mb-9 text-xs font-semibold uppercase mx-auto text-gray-500">
                                 Company
                             </h3>
                             <ul>
@@ -57,7 +57,7 @@ function Footer() {
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-2/12">
                         <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+                            <h3 className="tracking-px mb-9  text-xs font-semibold mx-auto uppercase text-gray-500">
                                 Support
                             </h3>
                             <ul>
@@ -98,7 +98,7 @@ function Footer() {
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-3/12">
                         <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+                            <h3 className="tracking-px mb-9 text-xs font-semibold mx-auto uppercase text-gray-500">
                                 Legals
                             </h3>
                             <ul>
