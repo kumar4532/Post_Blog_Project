@@ -21,7 +21,7 @@ function NewsCard({$id, title, content, featuredImage}) {
   
   return (
     <Link to={`/post/${$id}`}>
-      <div className="card md:h-[90vh] h-[75vh] shadow-xl">
+      <div className="card md:h-[85vh] h-[75vh] shadow-xl">
         <figure className='w-full h-[50%]'>
           <img
             src={appwriteService.getFilePreview(featuredImage)}
@@ -29,7 +29,7 @@ function NewsCard({$id, title, content, featuredImage}) {
             className='h-full object-cover' />
         </figure>
         <div className="card-body p-6 bg-neutral-900 text-white">
-          <h2 className="card-title mb-2 md:text-xl text-lg">{title}</h2>
+          <h2 className="card-title mb-2 md:text-xl md:font-semibold text-lg ">{title}</h2>
           <p className='md:text-lg text-md'>{cleanContent}</p>
         </div>
       </div>
