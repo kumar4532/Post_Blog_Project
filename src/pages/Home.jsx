@@ -72,9 +72,9 @@ function Home() {
                     </div>
                     <div className='flex flex-col w-full h-full p-4 border border-zinc-600 rounded-xl shadow-lg mb-8'>
                         <span className='text-red-400 text-left text-2xl mb-4'>News</span>
-                        <div className="flex flex-nowrap overflow-x-auto p-2 space-x-4 rounded-box">
+                        <div className="flex carousel flex-nowrap overflow-x-auto p-2 space-x-4 rounded-box">
                             {newsPosts.map((post, index) => (
-                                <div key={index} className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                                <div key={index} className="flex-none carousel-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                                     {post}
                                 </div>
                             ))}
@@ -82,10 +82,10 @@ function Home() {
                     </div>
                     <div className='flex flex-col h-full p-4 border border-zinc-600 rounded-xl shadow-lg mb-8'>
                         <div className='text-red-400 text-left text-2xl mb-2'>Guides</div>
-                        <div className='flex flex-nowrap overflow-x-auto w-full space-x-6 p-4'>
+                        <div className='flex carousel flex-nowrap overflow-x-auto w-full space-x-6 p-4'>
                             {
                                 posts.filter((post) => post.category === "game-guide").map((post) => (
-                                    <div key={post.$id} className='flex-none lg:min-h-[90vh] min-h-[50vh] w-full sm:w-1/2 md:w-[40%] lg:w-[30%]'>
+                                    <div key={post.$id} className='flex-none carousel-item lg:min-h-[90vh] min-h-[50vh] w-full sm:w-1/2 md:w-[40%] lg:w-[30%]'>
                                         <ReviewCard {...post}/>
                                     </div>
                                 ))
@@ -101,10 +101,10 @@ function Home() {
                                 ))
                             }
                         </div>
-                        <div className='flex flex-nowrap overflow-x-auto w-full lg:h-[80vh] md:h-[50vh] space-x-4 p-4'>
+                        <div className='flex flex-nowrap carousel overflow-x-auto w-full lg:h-[80vh] md:h-[50vh] space-x-4 p-4'>
                             {
                                 filteredArticles.map((post) => (
-                                    (!post.tags.includes("featured")) && (<div key={post.$id} className='flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4'>
+                                    (!post.tags.includes("featured")) && (<div key={post.$id} className='flex-none carousel-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4'>
                                         <OriginalsCard {...post}/>
                                     </div>)
                                 ))
