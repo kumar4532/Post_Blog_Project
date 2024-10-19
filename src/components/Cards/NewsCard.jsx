@@ -21,7 +21,7 @@ function NewsCard({$id, title, content, featuredImage}) {
   
   return (
     <Link to={`/post/${$id}`}>
-      <div className="card md:h-[75vh] h-[60vh] shadow-xl">
+      <div className="card md:h-[90vh] h-[75vh] shadow-xl">
         <figure className='w-full h-[50%]'>
           <img
             src={appwriteService.getFilePreview(featuredImage)}

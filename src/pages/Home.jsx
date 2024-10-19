@@ -74,7 +74,7 @@ function Home() {
                         <span className='text-red-400 text-left text-2xl mb-4'>News</span>
                         <div className="flex carousel flex-nowrap overflow-x-auto p-2 space-x-4 rounded-box scrollbar-hide">
                             {newsPosts.map((post, index) => (
-                                <div key={index} className="flex-none carousel-item w-full lg:min-h-[90vh] min-h-[70vh] sm:w-1/2 md:w-1/3 lg:w-1/4">
+                                <div key={index} className="flex-none carousel-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                                     {post}
                                 </div>
                             ))}
