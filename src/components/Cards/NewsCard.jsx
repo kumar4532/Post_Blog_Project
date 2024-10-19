@@ -30,7 +30,7 @@ function NewsCard({$id, title, content, featuredImage}) {
         </figure>
         <div className="card-body p-6 bg-neutral-900 text-white">
           <h2 className="card-title mb-2 md:text-xl md:font-semibold text-lg ">{title}</h2>
-          <p className='md:text-lg text-md'>{cleanContent}</p>
+          <p className='md:text-lg text-base p-2'>{cleanContent}</p>
         </div>
       </div>
     </Link>
