@@ -29,8 +29,8 @@ function NewsCard({$id, title, content, featuredImage}) {
             className='h-full object-cover' />
         </figure>
         <div className="card-body p-6 bg-neutral-900 text-white">
-          <h2 className="card-title mb-2 md:text-xl md:font-semibold text-lg ">{title}</h2>
-          <p className='md:text-lg text-base p-2'>{cleanContent}</p>
+          <h2 className="card-title mb-2 lg:text-xl lg:font-semibold text-lg ">{title}</h2>
+          <p className='lg:text-base text-base'>{cleanContent}</p>
         </div>
       </div>
     </Link>
