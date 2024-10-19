@@ -1,5 +1,24 @@
 import conf from '../conf/config.js';
 import { Client, ID, Databases, Storage, Query } from "appwrite";
+import { nanoid } from '@reduxjs/toolkit';
+
+function generateUniqueSlug(title) {
+    let slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    
+    slug = slug.replace(/^-+|-+$/g, '');
+    
+    if (!slug || slug.length > 32) {
+        slug = nanoid(8); // Generate a random 8-character string
+    }
+    
+    // Ensure the slug is no longer than 36 characters
+    slug = slug.slice(0, 32);
+    
+    // Append a short unique identifier
+    const uniqueId = nanoid(4); // Generate a random 4-character string
+    
+    return `${slug}-${uniqueId}`;
+}
 
 export class Service{
     client = new Client();
@@ -14,8 +33,11 @@ export class Service{
         this.bucket = new Storage(this.client);
     }
 
-    async createPost({title, slug, content, featuredImage, status, userId}){
+    async createPost({title, content, featuredImage, status, userId, category, tags}){
+        console.log(tags);
+        
         try {
+            const slug = generateUniqueSlug(title);
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
@@ -26,6 +48,8 @@ export class Service{
                     featuredImage,
                     status,
                     userId,
+                    category,
+                    tags
                 }
             )
         } catch (error) {
@@ -33,7 +57,7 @@ export class Service{
         }
     }
 
-    async updatePost(slug, {title, content, featuredImage, status}){
+    async updatePost(slug, {title, content, featuredImage, status, category, tags}){
         try {
             return await this.databases.updateDocument(
                 conf.appwriteDatabaseId,
@@ -44,6 +68,8 @@ export class Service{
                     content,
                     featuredImage,
                     status,
+                    category,
+                    tags
 
                 }
             )

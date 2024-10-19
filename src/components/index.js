@@ -8,10 +8,14 @@ import Signup from "./Signup";
 import Login from "./Login"
 import Button from "./Button"
 import PostForm from "./post-form/PostForm"
-import PostCard from "./PostCard"
+import PostCard from "./Cards/PostCard"
 import AuthLayout from "./AuthLayout"
 import Input from "./Input";
 import Select from "./Select"
+import NewsCard from "./Cards/NewsCard";
+import ReviewCard from "./Cards/ReviewCard";
+import OriginalsCard from "./Cards/OriginalsCard";
+import Tags from "./Tags";
 
 
 export{
@@ -29,4 +33,8 @@ export{
     AuthLayout,
     Input,
     Select,
+    NewsCard,
+    ReviewCard,
+    OriginalsCard,
+    Tags
 }

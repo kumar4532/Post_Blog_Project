@@ -52,7 +52,7 @@ export default function Post() {
     return post ? (
         <div className="py-8 m-auto max-w-6xl">
             <Container>
-                <div className="relative left-1/3 mb-4">
+                <div className="flex justify-end mb-6">
                     {isAuthor && (
                         <div>
                             <Link to={`/edit-post/${post.$id}`}>
@@ -74,15 +74,15 @@ export default function Post() {
                         className="rounded-xl"
                     />
                 </div>
-                <div className="relative right-1/3 mb-2">
+                <div className="relative right-1/3 mb-2 text-white">
                     {creator && (
                         <p className="font-sans underline text-blue-500">Created By: {creator.name}</p>
                     )}
                 </div>
                 <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
+                    <h1 className="text-2xl text-white font-bold">{post.title}</h1>
                 </div>
-                <div className="browser-css">
+                <div className="browser-css text-white">
                     {parse(post.content)}
                 </div>
             </Container>
