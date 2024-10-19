@@ -1,5 +1,5 @@
 import React from 'react'
-import appwriteService from "../appwrite/conf"
+import appwriteService from "../../appwrite/conf"
 import {Link} from 'react-router-dom'
 
 function NewsCard({$id, title, content, featuredImage}) { 
