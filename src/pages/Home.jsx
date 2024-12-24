@@ -101,7 +101,7 @@ function Home() {
                                 ))
                             }
                         </div>
-                        <div className='flex flex-nowrap carousel overflow-x-auto w-full lg:h-[80vh] md:h-[50vh] space-x-4 p-4'>
+                        <div className='flex flex-nowrap carousel overflow-x-auto w-full lg:h-[70vh] md:h-[50vh] space-x-4 p-4'>
                             {
                                 filteredArticles.map((post) => (
                                     (!post.tags.includes("featured")) && (<div key={post.$id} className='flex-none carousel-item w-full sm:w-1/2 md:w-1/3 lg:w-1/4'>
